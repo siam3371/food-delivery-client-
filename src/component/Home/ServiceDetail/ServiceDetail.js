@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react'; 
-import { useParams } from 'react-router';
-
+import { useParams } from 'react-router'; 
+import './ServicesDetail.css' 
 const ServiceDetail = () => {
     const  {detail} = useParams() 
         
@@ -11,7 +11,7 @@ const ServiceDetail = () => {
     const [isLoading, setIsLoading] = useState(true) 
    
  useEffect(() =>
-      fetch("http://localhost:5000/product")
+      fetch("https://ancient-earth-91209.herokuapp.com/product")
       .then(res => res.json())
       .then(data=>setDetails(data))
     ,[])
@@ -26,27 +26,25 @@ useEffect(() =>{
     }
 
 ,[details]) 
-console.log(specificDetail)
-
+ 
     return (
-     <div className="mt-5" >
-            <div style={{
-                marginLeft:"500px"
-            }} >
-             <div className="card" style={{
-                width: "18rem"
-            }}>
-  <img className="card-img-top" src={specificDetail?.img} alt="Card image cap"/>
-  <div className="card-body">
-    <h5 className="card-title">{specificDetail?.name}</h5>
-    <p className="card-text">{specificDetail?.description}</p>
-    <p>price:${specificDetail?.price}</p>
-    <button href="#" className="btn btn-primary">please order</button>
-  </div>
+   <div className="row container detail"> 
+<div className="mt-5 col-lg-4 ms-5 col-4 col-md-4" >
+   <div  >
+    <div className="card">
+<img className="card-img-top" src={specificDetail?.img} alt="Card image cap"/>
+<div className="card-body">
+<h5 className="card-title">{specificDetail?.name}</h5>
+<p className="card-text">{specificDetail?.description}</p>
+<p>price:${specificDetail?.price}</p>
+<button href="#" className="btn btn-primary">please order</button>
 </div>
-        </div>
-     </div>
+</div>
+</div>
+</div></div>
     );
 };
-
+// style={{
+    // marginLeft:"500px"
+// }}
 export default ServiceDetail;

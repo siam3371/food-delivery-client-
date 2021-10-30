@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useProvider from '../Hook/useProvider';
 import './Header.css'
 const Header = () => {
+    const {user, googleSignOut, logOut} = useProvider() 
     return (
 
 <>
@@ -16,8 +18,16 @@ const Header = () => {
       <Nav.Link as={Link} to="/aboutUs" className="brand">My Orders</Nav.Link>
       <Nav.Link as={Link} to="/doctors" className=" brand "> Manage All Orders </Nav.Link>
       <Nav.Link as={Link} to="/doctors" className=" brand ">Add A New Service</Nav.Link>
-      <button className="regular-btn"><Nav.Link as={Link} to="/doctors" className=" brand ">Login</Nav.Link>
-</button>
+      <button className="regular-btn"><Nav.Link as={Link} to="/login" className=" brand ">Login</Nav.Link>
+</button> 
+ {
+   user.email?    <button className="ms-3 "  onClick={logOut}>LogOut</button>   :  ''
+
+ }
+ { user.displayName ? 
+   <p className="text-success">Signed as: {user.displayName}</p>
+: ''
+ }
       <Navbar.Text> 
        </Navbar.Text>
     </Navbar.Collapse> 
