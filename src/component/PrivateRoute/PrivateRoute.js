@@ -4,6 +4,7 @@ import useProvider from '../Hook/useProvider';
 
 const PrivateRoute = ({ children, ...rest }) => {
     const {user, } = useProvider()
+    // private route  
     return (
         <div>
               <Route

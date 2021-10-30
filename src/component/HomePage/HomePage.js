@@ -5,7 +5,9 @@ import Services from '../Home/Services/Services';
 const HomePage = () => {
     return (
         <div>
+            {/* bannar part */}
             <Bannar></Bannar>
+            {/* services part */}
             <Services></Services>
         </div>
     );

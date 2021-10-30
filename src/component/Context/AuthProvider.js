@@ -4,6 +4,7 @@ export const AuthContext = createContext();
  
 const AuthProvider = ({children}) => {
     const allContext = UseAuth(); 
+    //  contact api
     return (
         <div>
               <AuthContext.Provider value={allContext}>
