@@ -1,0 +1,7 @@
+.footer {
+  font-size: 19px;
+  color: #8b797bf2 !important;
+}
+.footer-information p:hover {
+  color: #899faf;
+}

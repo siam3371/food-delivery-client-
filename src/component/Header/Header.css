@@ -1,0 +1,17 @@
+.brand {
+  color: #856161fa !important;
+  font-weight: 600;
+  font-size: 24px;
+}
+.brand:hover {
+  color: rgb(24, 124, 211) !important;
+}
+.a-style {
+  text-decoration: none;
+}
+/* button style */
+.regular-btn {
+  background-color: #292735;
+  border: 1px solid rgb(12, 68, 68);
+  border-radius: 25px;
+}
