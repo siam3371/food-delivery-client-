@@ -25,18 +25,18 @@ useEffect(() =>{
         const matchedData= details.find(det=>det._id==detail)
         setSpecificDetail(matchedData);
          } 
-         setLoading(false)
     }
  ,[details])  
-     const handlePurchase = (key)=> {
-        const uri = `/detail/${key}`;
-        console.log(uri)
-        history.push(uri) 
-     }
+    //  const handlePurchase = (key)=> {
+    //     const uri = `/detail/${key}`;
+    //     console.log(uri)
+    //     history.push(uri) 
+    //  }
+    // spinner loading
      if(isLoading){
         <Spinner animation="border" variant="light" />
     }
- 
+    
     return (
 //  services detail
  <div className="row container "> 

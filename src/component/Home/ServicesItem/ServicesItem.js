@@ -16,6 +16,7 @@ const ServicesItem = ({service}) => {
 <img className="w-100" src={service.img} alt="" />
 <h3>{service.name}</h3>
 <p>{service.description}</p> 
+ {/* button click */}
  <button onClick={() => handleDetails(service._id )} className="btn-regular">buy now</button>
  </div> 
   </div>

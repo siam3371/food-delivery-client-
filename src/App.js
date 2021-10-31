@@ -1,6 +1,7 @@
  import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import About from './component/About/About';
+import AddServices from './component/AddServices/AddServices';
 import Contact from './component/ContactUs/Contact';
 import AuthProvider from './component/Context/AuthProvider';
 import Footer from './component/Footer/Footer';
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
    <AuthProvider>
    <Router>
+     {/* website header  */}
           <Header></Header>
           <Switch>
             <Route exact path="/">
@@ -39,6 +41,9 @@ function App() {
               <PrivateRoute  path="/detail/:id">
                 <MyOrders></MyOrders>
                </PrivateRoute> 
+              <PrivateRoute  path="/addServices">
+                <AddServices></AddServices>
+               </PrivateRoute> 
                <Route path="/login">
                    <Login></Login>
                  </Route> 
@@ -46,8 +51,8 @@ function App() {
                  <NotFound></NotFound>
               </Route> 
           </Switch>
-          <Footer></Footer>
-
+          {/* website footer */}
+          <Footer></Footer> 
         </Router>
    </AuthProvider>
     </div>
