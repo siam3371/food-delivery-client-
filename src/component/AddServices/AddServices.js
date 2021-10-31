@@ -1,10 +1,13 @@
 import React, { useRef } from 'react';
+import useProvider from '../Hook/useProvider';
 
 const AddServices = () => {
      const imageRef =  useRef()
      const nameRef = useRef()
      const descriptionRef = useRef()
-     const handleAddUser = (e) => {
+     const {setLoading} = useProvider()
+     const handleAddUser = (e) => { 
+         setLoading(true)
         e.preventDefault(); 
         const name= nameRef.current.value;  
         const image = imageRef.current.value;
@@ -18,6 +21,7 @@ const AddServices = () => {
                 body:JSON.stringify(newService)
             })
             .then()
+            setLoading(false)
     } 
     return (
         <div>

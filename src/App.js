@@ -9,6 +9,7 @@ import Header from './component/Header/Header';
 import ServiceDetail from './component/Home/ServiceDetail/ServiceDetail';
  import HomePage from './component/HomePage/HomePage';
 import Login from './component/Login/Login';
+import ManageOrder from './component/ManageOrder/ManageOrder';
 import MyOrders from './component/MyOrders/MyOrders';
 import NotFound from './component/NotFound/NotFound';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
@@ -44,6 +45,9 @@ function App() {
               <PrivateRoute  path="/addServices">
                 <AddServices></AddServices>
                </PrivateRoute> 
+              <PrivateRoute  path="/manageOrder">
+                 <ManageOrder></ManageOrder>
+               </PrivateRoute> 
                <Route path="/login">
                    <Login></Login>
                  </Route> 
@@ -52,7 +56,8 @@ function App() {
               </Route> 
           </Switch>
           {/* website footer */}
-          <Footer></Footer> 
+          <Footer></Footer>
+
         </Router>
    </AuthProvider>
     </div>
