@@ -10,7 +10,7 @@ const AddServices = () => {
         const image = imageRef.current.value;
         const description = descriptionRef.current.value;
         const newService = {name, image, description};
-            fetch('http://localhost:5000/product', {
+            fetch('https://ancient-earth-91209.herokuapp.com/product', {
                 method:"POST",
                 headers:{
                     'content-type':"application/json"
