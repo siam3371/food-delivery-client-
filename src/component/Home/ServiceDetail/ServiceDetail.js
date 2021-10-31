@@ -1,7 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react'; 
+import { Spinner } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router'; 
+import useProvider from '../../Hook/useProvider';
 // import useProvider from '../../Hook/useProvider';
 import './ServicesDetail.css' 
 const ServiceDetail = () => {
@@ -9,26 +11,32 @@ const ServiceDetail = () => {
     const  {detail} = useParams()  
      const [details,setDetails]= useState([])
     const [specificDetail,setSpecificDetail] = useState({})
-    // const {setLoading} =  useProvider
-    
+    const {isLoading, setLoading} =  useProvider()    
  useEffect(() =>
       fetch("https://ancient-earth-91209.herokuapp.com/product")
         .then(res => res.json())
-      .then(data=>setDetails(data))
-       ,[])
+      .then(data=>setDetails(data)) 
+        ,[])
 
 
-useEffect(() =>{   
+useEffect(() =>{
+    setLoading(true)    
     if(details.length>0){ 
         const matchedData= details.find(det=>det._id==detail)
         setSpecificDetail(matchedData);
          } 
+         setLoading(false)
     }
- ,[details]) 
-     const handlePurchase = (key) => {
+ ,[details])  
+     const handlePurchase = (key)=> {
         const uri = `/detail/${key}`;
-         history.push(uri) 
+        console.log(uri)
+        history.push(uri) 
      }
+     if(isLoading){
+        <Spinner animation="border" variant="light" />
+    }
+ 
     return (
 //  services detail
  <div className="row container "> 
@@ -40,7 +48,7 @@ useEffect(() =>{
 <h5 className="card-title">{specificDetail?.name}</h5>
 <p className="card-text">{specificDetail?.description}</p>
 <p>price:${specificDetail?.price}</p>
-<button  className="btn btn-primary   p-2">purchase</button>
+<button  className="btn btn-primary p-2">purchase</button>
 </div>
 </div>
 </div>

@@ -5,12 +5,12 @@ const ServicesItem = ({service}) => {
     const history = useHistory();  
          const handleDetails = (key) => {
                  const uri = `/services/${key}`;
-                // console.log(uri)
+                console.log(uri)
                 history.push(uri) 
         } 
      return ( 
-<> 
-<div className="col-lg-4">
+<>  
+<div className="col-lg-4 col-md-12 col-12">
   {/* services item showing */}
 <div className="shadow-lg p-2 mb-5 bg-body rounded p-5">
 <img className="w-100" src={service.img} alt="" />

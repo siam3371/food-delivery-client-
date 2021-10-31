@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-  const MyOrders = () => {
-        const id = useParams()
-    return (
-        <div>
-            <h4>{id}</h4>
-        </div>
-    );
+import useProvider from '../Hook/useProvider';
+const MyOrders = () => {
+  const { id } = useParams()
+ 
+  const { user } = useProvider()
+  
+ 
+  return (
+    <div>
+
+          
+
+    </div>
+  );
 };
 
 export default MyOrders;

@@ -36,15 +36,12 @@ function App() {
               <PrivateRoute  path="/services/:detail">
                 <ServiceDetail></ServiceDetail>
                </PrivateRoute> 
-              {/* <Route   path="/detail/:id">
-                <ServiceDetail></ServiceDetail>
-               </Route>  */}
+              <PrivateRoute  path="/detail/:id">
+                <MyOrders></MyOrders>
+               </PrivateRoute> 
                <Route path="/login">
                    <Login></Login>
-                 </Route>
-                 <PrivateRoute path="/orders">
-                   <MyOrders></MyOrders>
-                 </PrivateRoute>
+                 </Route> 
               <Route exact path="*">
                  <NotFound></NotFound>
               </Route> 

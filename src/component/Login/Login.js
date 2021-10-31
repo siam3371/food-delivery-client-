@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { useHistory, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import useProvider from '../Hook/useProvider';
@@ -14,14 +15,14 @@ const Login = () => {
         .then((result )=> {
              setLoading(true)
             setUser(result.user) 
-                history.push(url)
-//    setLoading(false) 
+                history.push(url) 
 }) 
         .catch(err => console.log(err))
         .finally(() => {
             setLoading(false)
         })
      }
+
     return (
         // login place
         <div>

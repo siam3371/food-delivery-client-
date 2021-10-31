@@ -14,7 +14,7 @@ const UseAuth = () => {
             else{
                 setUser({})
             }
-              setLoading(false)
+              setLoading(true)
 
           })
           return () => unsubscribe
@@ -31,7 +31,7 @@ const UseAuth = () => {
         .then(()=>{}) 
     }
 
-    return {googleSignin, user, setUser  ,  setLoading,  logOut} 
+    return {googleSignin, user, setUser  ,isLoading,  setLoading,  logOut} 
 };
  
 export default UseAuth;
