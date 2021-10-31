@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './About.css'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 const About = () => {
+  useEffect(() => {
+       Aos.init({duration:2000})
+  },[])
     return (
-        <div>
+        <div  data-aos="zoom-in" >
                {/* using bootstrap responsive */}
       <div className="row owner container-fluid mt-5 p-5">
           <div className="col-lg-7 col-12 col-md-6">
