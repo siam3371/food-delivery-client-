@@ -30,9 +30,9 @@ function App() {
               <About></About>
               <Contact></Contact>
               </Route>
-              <Route path="/about">
+              {/* <Route path="/about">
               <About></About>
-                </Route>
+                </Route> */}
            <Route path="/contact">
              <Contact></Contact>
             </Route> 

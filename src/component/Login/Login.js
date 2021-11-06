@@ -13,8 +13,10 @@ const Login = () => {
     const handleGoogleLogin = () => {
          googleSignin() 
         .then((result )=> {
-             setLoading(true)
             setUser(result.user) 
+
+            //  setLoading(true)
+            console.log(result.user)
                 history.push(url) 
 }) 
         .catch(err => console.log(err))
