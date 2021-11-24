@@ -13,7 +13,7 @@ import ManageOrder from './component/ManageOrder/ManageOrder';
 import MyOrders from './component/MyOrders/MyOrders';
 import NotFound from './component/NotFound/NotFound';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
-   
+    
 function App() {    
   return (
     <div className="App">
