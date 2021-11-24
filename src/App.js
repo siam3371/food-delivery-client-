@@ -20,7 +20,8 @@ function App() {
    <AuthProvider>
    <Router>
      {/* website header  */}
-           <Switch>
+          <Header></Header>
+          <Switch>
             <Route exact path="/">
               <HomePage></HomePage>
               </Route>
