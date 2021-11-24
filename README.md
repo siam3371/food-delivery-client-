@@ -10,6 +10,9 @@
    <li> 1 Download the app. Earn by delivering food or parcels with your cycle. Download the app now.
 </li>
    <li>   Hussain Elius and Shifat Adnan (over 30) cofounded Pathao, the leading ride-sharing, on-demand logistics, and food delivery platform in Bangladesh.
+</li>
+    <li> n-demand logistics, and food delivery platform in Bangladesh.
 </li> 
+    <li>   gistics, and food delivery platform in Bangladesh.
  </ol>
   <p>So how does Pathao work? You place a request through the app or the website, and a properly vetted bike messenger picks up the package shortly thereafter. They usually deliver it to the destination within 90 minutes. "When you place a request, it goes straight to the nearest courier's smartphone. </p>
